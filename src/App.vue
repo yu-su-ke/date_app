@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <Clock class="clock"/>
     <Map class="map"/>
     <Gio_meter class="meter"/>
