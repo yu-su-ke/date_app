@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
+  <div>
     <div class="form-horizontal">
       <div class="form-group">
         <label class="col-md-2 control-label">Time Zone</label>
         <div class="col-md-10">
-          UTC<input type="text" size="3" readonly class="form-control" v-model="time"/>00
+          <p>UTC<input type="text" size="3" readonly class="form-control" v-model="time"/>00</p>
           <div class="help-block">
             <input type="range" min="-12" max="12" step="1" v-model.number="h" />
           </div>
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+
   export default {
     data(){
       return{
@@ -31,7 +32,10 @@
             return "-" + Math.abs(this.h)
           }
         }else{
-          return ("0" + this.h).slice(-2)
+          if(this.h < 10){
+            return ("+0" + this.h).slice(-3)
+          }
+          return ("+" + this.h).slice(-3)
         }
       },
     },
@@ -72,8 +76,9 @@
   }
 
   .form-control{
-    font-size: 2.0em;
+    font-size: 1.2em;
   }
+
 
 
 </style>

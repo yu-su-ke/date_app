@@ -13,7 +13,6 @@
 
 <script>
 
-
   const zeroPadding = (num, digit) => {
     return(Array(digit).join("0") + num).slice(-digit)
   };
@@ -55,6 +54,7 @@
       },
     },
   }
+
 </script>
 
 <style scoped>
