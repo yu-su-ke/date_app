@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="container">
-      <p class="date">{{ year }}/{{ month }}/{{ day }}</p>
+      <p class="date">{{ year }}/{{ month }}/{{ message.day }}</p>
       <div class="time">
-        <p class="time-item hours">{{ hours }}</p>
+        <p class="time-item hours">{{ message.hours }}</p>
         <p class="time-item minutes">{{ minutes }}</p>
         <p class="time-item seconds">{{ seconds }}</p>
       </div>
@@ -31,12 +31,12 @@
       month(){
         return zeroPadding(this.date.getMonth() + 1, 2)
       },
-      day(){
-        return zeroPadding(this.date.getDate(), 2)
-      },
-      hours() {
-        return zeroPadding(this.date.getHours() , 2)
-      },
+      // day(){
+      //   return zeroPadding(this.date.getDate(), 2)
+      // },
+      // hours() {
+      //   return zeroPadding(this.date.getHours() , 2)
+      // },
       minutes(){
         return zeroPadding(this.date.getMinutes(), 2)
       },
@@ -53,7 +53,7 @@
         this.date = new Date()
       },
     },
-    // props: ['message']
+    props: ['message']
   }
 
 </script>
@@ -64,6 +64,9 @@
     /*background-image: url("../assets/japan.jpeg");*/
     /*background-repeat: no-repeat;*/
     padding: 2%;
+    margin: 0 250px;
+    position: relative;
+    top: 50px;
   }
 
 

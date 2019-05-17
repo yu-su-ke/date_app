@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-<!--    <clock :message="h"></clock>-->
+    <clock :message="{hours, day}"></clock>
   </div>
 </template>
 
@@ -25,6 +25,7 @@
     data(){
       return{
         h: 0,
+        date: new Date(),
       }
     },
     computed: {
@@ -43,6 +44,29 @@
           return ("+" + this.h).slice(-3)
         }
       },
+      day: function() {
+        if(this.date.getUTCHours() + this.h >= 24){
+          return this.date.getUTCDate() + 1;
+        }else{
+          return this.date.getUTCDate();
+        }
+      },
+      hours: function() {
+        if(this.date.getUTCHours() + this.h >= 24){
+          return this.date.getUTCHours() + this.h - 24
+        }else{
+          return this.date.getUTCHours() + this.h
+        }
+      },
+    },
+    mounted() {
+      this.setDate();
+      setInterval(() => this.setDate(), 1000)
+    },
+    methods: {
+      setDate() {
+        this.date = new Date()
+      },
     },
   }
 
@@ -54,7 +78,7 @@
   input[type="range"] {
     -webkit-appearance:none;
     /*右に伸ばす*/
-    width: 95%; background: #eee;
+    width: 96%; background: #eee;
     box-shadow: 0 0 10px #666;
     border-radius: 50px;
   }
@@ -83,6 +107,7 @@
   .form-control{
     font-size: 1.2em;
   }
+
 
 
 
