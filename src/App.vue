@@ -44,7 +44,7 @@
     width: 100%;
     /*左に伸ばす*/
     max-width: 1200px;
-    margin: 80px auto;
+    margin: -100px auto;
   }
 
 </style>

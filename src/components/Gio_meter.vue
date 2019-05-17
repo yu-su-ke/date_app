@@ -11,12 +11,17 @@
         </div>
       </div>
     </div>
+<!--    <clock :message="h"></clock>-->
   </div>
 </template>
 
 <script>
+  import Clock from './Clock.vue';
 
   export default {
+    components: {
+      Clock
+    },
     data(){
       return{
         h: 0,

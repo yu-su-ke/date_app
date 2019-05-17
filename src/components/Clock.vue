@@ -35,7 +35,7 @@
         return zeroPadding(this.date.getDate(), 2)
       },
       hours() {
-        return zeroPadding(this.date.getHours(), 2)
+        return zeroPadding(this.date.getHours() , 2)
       },
       minutes(){
         return zeroPadding(this.date.getMinutes(), 2)
@@ -53,6 +53,7 @@
         this.date = new Date()
       },
     },
+    // props: ['message']
   }
 
 </script>
