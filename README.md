@@ -9,5 +9,18 @@ Slide the slide bar to display the UTC time of the area directly above that poin
 
 > ## Execution environment  
 Build the Vue.js environment and replace this files.  
+It is necessary to install node.js in advance.  
 
-```npm install -g vue-cli```
+1. vue-cli installation  
+```npm install -g vue-cli```  
+
+2. Create a directory for the app  
+```mkdir vue_test```  
+
+3. Move to the created directory  
+```cd vue_test```  
+
+4. Enter the following command and set as required.  
+```vue init webpack```  
+
+5. Please replace part of the contents of the file with this file.  
