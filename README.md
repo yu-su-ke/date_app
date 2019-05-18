@@ -5,4 +5,4 @@ vue.jsの練習でつくったUTC時間確認アプリ
   
 #### 実行環境  
 Vue.jsの環境を構築し、
-![てすと](https://gyazo.com/419eefc34ed3d9d59ac1a17f0c0b88bf)
+[![Image from Gyazo](https://i.gyazo.com/419eefc34ed3d9d59ac1a17f0c0b88bf.png)](https://gyazo.com/419eefc34ed3d9d59ac1a17f0c0b88bf)
