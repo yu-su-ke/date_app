@@ -23,4 +23,9 @@ It is necessary to install node.js in advance.
 4. Enter the following command and set as required.  
 ```vue init webpack```  
 
-5. Please replace part of the contents of the file with this file.  
+5. Replace part of the contents of the file with this file.  
+
+6. Enter the following command to start the local server  
+```npm run dev```  
+
+7. Access http://localhost:8080  
