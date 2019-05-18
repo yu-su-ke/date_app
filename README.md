@@ -28,4 +28,4 @@ It is necessary to install node.js in advance.
 6. Enter the following command to start the local server  
 ```npm run dev```  
 
-7. Access http://localhost:8080  
+7. Access to http\://localhost:8080  
